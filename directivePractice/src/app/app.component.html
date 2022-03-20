@@ -1,0 +1,17 @@
+<label>Here is the Directive</label>
+<br><br>
+
+<input
+  type="button"
+  [value]="buttonText"
+  (click)="buttonClicked()"
+>
+<p *ngIf="checkVisibility()">Hello there</p>
+
+<ul>
+  <li
+    *ngFor="let data of recordedNumClicks"
+    [ngStyle]="{backgroundColor: data >= 5 ? 'blue' : 'transparent'}" 
+    [ngClass]="{dataColor: data >= 5}"
+    >{{ data }}</li>
+</ul>
